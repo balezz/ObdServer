@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Auto Telemetry</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="subpage">
+
+<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <a href="index.html" class="logo">Telemetry Systems</a>
+        <nav id="nav">
+            <a th:href="@{index}">Home</a>
+            <a th:href="@{generic}">Generic</a>
+            <a th:href="@{elements}">Elements</a>
+        </nav>
+        <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+</header>
+
+<!-- Main -->
+<section id="main" class="wrapper">
+    <div class="inner">
+        <header class="align-center">
+            <h2>Message in process!</h2>
+            <p>Thank you, <span th:text="${message.name}"></span> </p>
+        </header>
+
+        <!-- Intro -->
+        <div class="row">
+
+                <p>Your message <span th:text="${message.messageText}"></span>
+                    from <span th:text="${message.email}"></span> is in process!</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+
+         <div class="copyright">
+            &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

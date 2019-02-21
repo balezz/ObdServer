@@ -19,9 +19,9 @@
 				<div class="inner">
 					<a href="index.html" class="logo"><strong>Telemetry Systems</strong></a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Generic</a>
-						<a href="elements.html">Elements</a>
+						<a th:href="@{/}">Home</a>
+						<a th:href="@{generic}">Generic</a>
+						<a th:href="@{elements}">Elements</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -101,23 +101,27 @@
 
 					<h3>Get in touch</h3>
 
-					<form action="#" method="post">
+					<form method="post" th:object="${message}">
 
 						<div class="field half first">
 							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
+							<input name="name" id="name" type="text" placeholder="Name" th:field="*{name}">
 						</div>
+
 						<div class="field half">
 							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
+							<input name="email" id="email" type="email" placeholder="Email" th:field="*{email}">
 						</div>
+
 						<div class="field">
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+							<textarea name="message" id="message" rows="6"
+									  placeholder="Message" th:field="*{messageText}"></textarea>
 						</div>
-						<ul class="actions">
+
+						 <ul class="actions" >
 							<li><input value="Send Message" class="button alt" type="submit"></li>
-						</ul>
+						 </ul>
 					</form>
 
 					<div class="copyright">

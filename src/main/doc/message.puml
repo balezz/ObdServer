@@ -1,0 +1,4 @@
+@startuml
+index -> HomeController: POST message
+HomeController --> confirmOk.html: response
+@enduml
