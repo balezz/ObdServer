@@ -30,7 +30,7 @@ public class HomeController {
     * */
     @GetMapping
     public String showHome(Model model) {
-        model.addAttribute("message", new Message());
+        model.addAttribute("message", new Message(null, null, null));
         return "/index";
     }
 

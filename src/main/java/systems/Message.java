@@ -19,6 +19,7 @@ public class Message {
     /*Текст сообщения*/
     private String messageText;
 
+    /*Конструктор, переопределен для создания новых сообщений*/
     public Message(String name, String email, String messageText) {
         this.name = name;
         this.email = email;
