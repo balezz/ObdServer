@@ -1,3 +1,2 @@
-# systems-telemetry
-Our company researches in perspective telemetry and metrology systems. 
-Base framework is Spring. 
+# OBD ELM327 server
+Учебный проект. Сервер обработки сообщений от устройства Android, содержащих информацию, полученную от устройства ELM327. 
